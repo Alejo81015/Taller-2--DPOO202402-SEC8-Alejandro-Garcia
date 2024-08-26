@@ -204,8 +204,12 @@ public class SandboxConjuntos
      */
     public boolean compararElementos( String[] otroArreglo )
     {
-    	
-        return false;
+    	 for (String elemento : otroArreglo) {
+    	        if (!arbolCadenas.contains(elemento)) {
+    	            return false;
+    	        }
+    	    }
+    	    return true;
     }
 
 }

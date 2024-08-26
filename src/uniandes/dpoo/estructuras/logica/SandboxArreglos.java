@@ -444,7 +444,10 @@ public class SandboxArreglos
     public boolean compararArregloEnteros( int[] otroArreglo )
     {
     	boolean respuesta = true;
-    	if(otroArreglo.length!=0 && arregloEnteros.length!=0) {
+    	if (arregloEnteros.length==0) {
+    		return false;
+    	}
+    	if(otroArreglo.length!=0) {
     	int pos =0;
     	while (pos<arregloEnteros.length && respuesta == true) {
     		if (arregloEnteros[pos]!=otroArreglo[pos]) {
@@ -463,7 +466,6 @@ public class SandboxArreglos
      */
     public boolean mismosEnteros( int[] otroArreglo )
     {
-    	
     	boolean respuesta = true;
     	if (arregloEnteros.length!=0) {
     	int[] copiaOriginal = Arrays.copyOf(arregloEnteros, arregloEnteros.length);
@@ -475,8 +477,8 @@ public class SandboxArreglos
                  return false;
              }
          }
+    	} 
     	
-    	}
         return respuesta;
     }
 
